@@ -3,7 +3,7 @@ body {
     padding: 0;
     height: 100vh;
     font-size: 2em;
-    background: #4e4e50;
+    background: #2c3e50;
     color: white;
 }
 
@@ -12,6 +12,14 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    padding: 5px 0 5px 0;
 }
 
 .btn{
@@ -24,22 +32,57 @@ body {
     display: block;
     overflow: hidden;
     text-transform: uppercase;
-    transition: 1s all ease;
 }
 
-.btn::before{
-    background: #45a29e;
+.horizontal::before{
+    background: #8e44ad;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 2s ease;
+    width: 0%;
+    height: 100%;
+}
+
+.horizontal:hover::before{
+    width: 100%;
+}
+
+.diagonal::before{
+    background: #2ecc71;
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(25deg);
     z-index: -1;
-    transition: all 0.6s ease;
+    transition: all 2s ease;
     width: 120%;
     height: 0%;
 }
 
-.btn:hover::before{
+.diagonal:hover::before{
     height: 200%;
+}
+
+.circle::before{
+    background: #e67e22;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 2s ease;
+    width: 0%;
+    height: 0%;
+    border-radius: 200px;
+}
+
+.circle:hover::before{
+    height: 200px;
+    width: 200px;
 }
