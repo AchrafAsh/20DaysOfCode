@@ -1,0 +1,26 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="30" cy="30" r="28.5" stroke="url(#paint0_linear)" stroke-width="3"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="18" width="50" height="24">
+<line x1="12.5" y1="26.5" x2="12.5" y2="33.5" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="47.5" y1="26.5" x2="47.5" y2="33.5" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="19.5" y1="22.5" x2="19.5" y2="37.5" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="40.5" y1="22.5" x2="40.5" y2="37.5" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="26.5" y1="19.5" x2="26.5" y2="40.5" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="33.5" y1="19.5" x2="33.5" y2="40.5" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="6.5" y1="26.5" x2="6.5" y2="33.5" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="53.5" y1="26.5" x2="53.5" y2="33.5" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</mask>
+<g mask="url(#mask0)">
+<rect x="5" y="18" width="51" height="26" fill="url(#paint1_linear)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="30" y1="0" x2="30" y2="60" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1762A7"/>
+<stop offset="1" stop-color="#BC3A80"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="30.5" y1="18" x2="30.5" y2="44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1762A7"/>
+<stop offset="1" stop-color="#BC3A80"/>
+</linearGradient>
+</defs>
+</svg>

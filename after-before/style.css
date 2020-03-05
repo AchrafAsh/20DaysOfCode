@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-size: 2em;
+    background: #2c3e50;
+    color: white;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    padding: 5px 0 5px 0;
+}
+
+.btn{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-family: "lato";
+    border: solid 1px white;
+    padding: 15px 20px;
+    display: block;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.horizontal::before{
+    background: #8e44ad;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 2s ease;
+    width: 0%;
+    height: 100%;
+}
+
+.horizontal:hover::before{
+    width: 100%;
+}
+
+.diagonal::before{
+    background: #2ecc71;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(25deg);
+    z-index: -1;
+    transition: all 2s ease;
+    width: 120%;
+    height: 0%;
+}
+
+.diagonal:hover::before{
+    height: 200%;
+}
+
+.circle::before{
+    background: #e67e22;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 2s ease;
+    width: 0%;
+    height: 0%;
+    border-radius: 200px;
+}
+
+.circle:hover::before{
+    height: 200px;
+    width: 200px;
+}

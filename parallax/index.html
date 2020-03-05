@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parallax Scrolling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="zoom">
+        <img src="mountain1.png" id="layer1" alt="mountain">
+        <img src="mountain2.png" id="layer2" alt="mountain">
+        <img src="text.png" id="text">
+    </section>
+    <section class="content">
+        <h2>Simple Background Parallax</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam dicta assumenda veritatis inventore, deserunt praesentium architecto, dolorum ducimus fugit debitis reprehenderit corrupti accusantium accusamus distinctio quibusdam excepturi sed commodi enim. Quas eligendi voluptatem, exercitationem id quibusdam maxime reiciendis possimus omnis nostrum ullam at temporibus atque ab cumque quam saepe nam ea. Obcaecati perspiciatis aliquid quasi non at, quos iusto, dolorum provident eaque est deleniti sunt, eum amet? Exercitationem natus reprehenderit distinctio, illum praesentium quae quos minus itaque consequatur laborum odit quis eum eveniet fuga recusandae nulla autem rerum deleniti et optio odio incidunt. Optio inventore laborum ducimus a dolore consectetur!</p>
+    </section>
+    <script type="text/javascript">
+        var layer1 = document.getElementById('layer1')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll', (e) => {
+            var offset = window.pageYOffset;
+            scroll = offset;
+            layer1.style.right = scroll/50 + '%';
+            layer1.style.width = (100 + scroll/5) + '%'; 
+        })
+
+        var layer2 = document.getElementById('layer2')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll', (e) => {
+            var offset = window.pageYOffset;
+            scroll = offset;
+            layer2.style.width = (100 + scroll/5) + '%'; 
+            layer2.style.left =  scroll/50 + '%'; 
+        })
+
+        var text = document.getElementById('text')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll', (e) => {
+            var offset = window.pageYOffset;
+            scroll = offset;
+            windowWidth = window.innerWidth;
+            text.style.top = - scroll/5 + '%';
+        })
+    </script>
+</body>
+</html>

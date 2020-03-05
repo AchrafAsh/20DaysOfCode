@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+:root{
+    --darkGray:#414348;
+    --darkerGray: #21242E;
+    --yellow:#EAAF57;
+    --red:#E34339;
+    --purple:#8556E8;
+    --green:#6DCC55;
+    --gray: #E5E5E5;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Header: brand + navbar */
+
+header {
+    position: fixed;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 5vw 45vw 45vw 5vw;
+    padding-top: 4vh;
+    z-index: 100;
+    mix-blend-mode: difference;
+}
+
+header .brand-logo {
+    grid-column: 2;
+}
+
+header .brand-logo a {
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+}
+
+header ul {
+    justify-self: end;
+    width: 500px;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header ul a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+
+section {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Hero Section */
+
+#hero {
+    display: grid;
+    grid-template-columns: 5vw 30vw 10vw 50vw 5vw;
+    background: radial-gradient(var(--darkGray), var(--darkerGray));
+    color: white;
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+}
+
+#hero .text {
+    grid-column: 2;
+    display: grid;
+    grid-row-gap: 10px;
+}
+
+#hero .text h1 {
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#hero .text span {
+    font-size: 14px;
+}
+
+#hero .image {
+    width: 100%;
+    grid-column: 4;
+    place-self: center center;
+}
+
+#hero .image .slideshow {
+    display: flex;
+    flex-direction: row;
+}
+
+#hero .image .navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: default;
+}
+
+#hero .image .navigation li {
+    position: relative;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#hero .image .navigation li a {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-radius: 10px;
+    position: absolute;
+    border: solid 2px white;
+}
+
+#hero .image .navigation #current {
+    background-color: var(--purple);
+}
+
+#hero .image .main-window {
+    width: 100%;
+    transform: translateY(10%);
+}
+
+/* Services section */
+
+#services {
+    background: radial-gradient(white, var(--gray));
+    display: grid;
+    grid-template-columns: 5vw repeat(3, 30vw) 5vw;
+}
+
+.first-service {
+    grid-column: 2;
+}
+.second-service {
+    grid-column: 3;
+}
+.third-service {
+    grid-column: 4;
+}
+
+#services .service {
+    display: grid;
+    grid-template-rows: 50vh 20vh 30vh;
+}
+
+#services .service img{
+    width: 100%;
+    place-self: center center;
+}
+
+#services .title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transform: translate(10%, -50%);
+}
+
+#services .title h2 {
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 500;
+    font-size: 18px;
+    z-index: 1;
+}
+
+#services .title span {
+    transform: translate(-150px, -50px);
+    font-size: 92px;
+    font-weight: 300;
+    color: var(--gray);
+    display: flex;
+}
+
+#services .service-description {
+    width: 80%;
+    justify-self: center;
+    transform: translateY(-50%);
+}
+
+/* Footer */
+
+footer {
+    display: grid;
+    height: 300px;
+    grid-template-columns: 5vw 30vw 30vw 30vw 5vw;
+    grid-gap: 20px;
+    background: var(--darkerGray);
+    color: white;
+    padding-top: 80px;
+}
+
+footer a {
+    color: var(--purple);
+}
+
+footer h3 {
+    font-size: 24px;
+    font-weight: 200;
+    padding-bottom: 20px;
+}
+
+footer a {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+footer li {
+    padding-bottom: 20px;
+}
+
+footer .description {
+    grid-column: 2;
+    width: 80%;
+}
+
+
+/* Mobile responsive */
+
+@media (max-width: 800px) {
+    header {
+        position: absolute;
+    }
+    header ul{
+        display: none;
+    }
+    #hero {
+        grid-template-columns: 10vw auto 10vw;
+    }
+    #hero .main-window {
+        display: none;
+    }
+    #services {
+        grid-template-columns: 10vw auto 10vw;
+        grid-template-rows: 10vh repeat(3, auto);
+        height: 100%;
+    }
+    .first-service {
+        grid-row: 2;
+        grid-column: 2;
+    }
+    .second-service {
+        grid-row: 3;
+        grid-column: 2;
+    }
+    .third-service {
+        grid-row: 4;
+        grid-column: 2;
+    }
+
+    footer {
+        grid-template-columns: 5vw auto 5vw;
+        grid-template-rows: repeat(3, auto 2vh) 5vh;
+        height: 100%;
+    }
+
+    footer .description{
+        grid-row: 1;
+    }
+    footer .navigation-links{
+        grid-row: 3;
+        grid-column: 2;
+    }
+    footer .social-links {
+        grid-row: 5;
+        grid-column: 2;
+    }
+}
